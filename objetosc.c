@@ -1,4 +1,21 @@
 #include <stdio.h>
+#include <math.h>
+
+float obliczObjetosciWalca(float r, float h){
+    return(M_PI*r*r*h);
+}
+
+void obsluzObliczanieObjetosciWalca() {
+    float r;
+    float h;
+    printf("Podaj wysokosc walca\t");
+    scanf("%f", &h);
+    printf("Podaj promien kola\t");
+    scanf("%f", &r);
+    printf("Pole kola wynosi:\t%f\n", obliczObjetosciWalca(r, h));
+
+    return;
+}
 
 float obliczObjetoscProstopadloscianu (float a, float b, float c) {
 	return(a*b*c);
@@ -23,6 +40,7 @@ void obsluzObliczanieObjetosciProstopadloscianu(){
 
 int main() {
     obsluzObliczanieObjetosciProstopadloscianu();
+    obsluzObliczanieObjetosciWalca();
 
     return;
 }
